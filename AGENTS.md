@@ -4,9 +4,12 @@
 This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` before writing any code. Heed deprecation notices.
 <!-- END:nextjs-agent-rules -->
 
-# Portfolio Project Agent Instructions
+# Full-Stack Deployment Shell — Agent Instructions
 
-This is Benny Goldberg's personal portfolio site and first full-stack/agentic development training project.
+This is a reusable Next.js starter shell. It demonstrates common full-stack
+patterns (pages, components, data files, API routes, a contact form, a health
+check) with no project-specific content. Future projects clone it and drop in
+their own content. Keep these reusable patterns clean.
 
 ## Stack
 
@@ -35,21 +38,22 @@ The dev script intentionally uses Webpack:
 
 Do not switch back to Turbopack unless Benny specifically asks.
 
-## Architecture
-
-Use this structure:
+## Important Folders
 
 ```text
 app/
-  page.tsx
+  layout.tsx              # root layout
+  page.tsx                # home page, composes the sections
+  api/
+    contact/route.ts      # POST — validates contact form, returns JSON
+    health/route.ts       # GET — status/timestamp/environment JSON
 
-components/
-  hero.tsx
-  featured-projects.tsx
-  project-card.tsx
+components/                # reusable UI (navbar, hero, features, contact, footer, ...)
 
 content/
-  projects.ts
+  site.ts                 # site-level copy/config
+  features.ts             # feature list data
+  stack.ts                # tech stack data
 ```
 
 ## Architecture Rules
@@ -57,20 +61,21 @@ content/
 - `app/page.tsx` should compose page sections.
 - Reusable UI belongs in `components/`.
 - Static data belongs in `content/`.
+- API routes belong in `app/api/<name>/route.ts`.
 - Only client components that use browser behavior or Motion should include `"use client"`.
 - Use `motion/react`, not `framer-motion`.
 - Do not redesign existing sections unless asked.
-- Preserve the black, premium, minimal visual style.
+- Preserve the minimal visual style.
 - Prefer small, understandable changes.
 
 ## Current Data Flow
 
-Project data flows like this:
+Static content flows like this:
 
 ```text
-content/projects.ts
-  → components/featured-projects.tsx
-  → components/project-card.tsx
+content/features.ts
+  → components/features.tsx
+  → components/feature-card.tsx
   → app/page.tsx
 ```
 
@@ -90,7 +95,7 @@ When working in this repo:
 1. Inspect relevant files before editing.
 2. Follow existing patterns.
 3. Keep changes scoped.
-4. Do not add packages unless necessary.
+4. Do not add dependencies, databases, auth, payments, or external services without asking Benny first.
 5. Validate with `npm run lint` and `npm run build`.
 6. Explain changed files clearly for Benny.
 

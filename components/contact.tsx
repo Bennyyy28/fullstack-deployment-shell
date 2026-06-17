@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { site } from "@/content/site";
 
 type FormState = {
   name: string;
@@ -67,46 +66,20 @@ export default function Contact() {
     <section id="contact" className="px-6 py-24">
       <div className="mx-auto max-w-6xl rounded-3xl border border-white/10 bg-white/[0.03] p-8 md:p-12">
         <p className="mb-3 text-sm uppercase tracking-[0.3em] text-white/40">
-          Contact
+          Demo Form
         </p>
 
         <div className="grid gap-10 md:grid-cols-[1fr_1fr]">
           <div>
             <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-              Let’s build useful systems.
+              A working client-to-API form.
             </h2>
 
             <p className="mt-4 max-w-2xl text-white/60">
-              I’m interested in opportunities involving AI systems, business
-              operations, automation, marketing, and full-stack development.
+              This form manages state with useState, validates input on the
+              client, posts JSON to <code>/api/contact</code>, and renders the
+              response. Swap the handler for your own email service or database.
             </p>
-
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={`mailto:${site.email}`}
-                className="rounded-full bg-white px-5 py-3 text-center text-sm font-medium text-black transition hover:bg-white/80"
-              >
-                Email Me
-              </a>
-
-              <a
-                href={site.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-white/10 px-5 py-3 text-center text-sm font-medium text-white transition hover:bg-white/10"
-              >
-                LinkedIn
-              </a>
-
-              <a
-                href={site.github}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full border border-white/10 px-5 py-3 text-center text-sm font-medium text-white transition hover:bg-white/10"
-              >
-                GitHub
-              </a>
-            </div>
           </div>
 
           <form onSubmit={handleSubmit} className="space-y-4">

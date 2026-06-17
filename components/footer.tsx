@@ -8,21 +8,21 @@ export default function Footer() {
 
         <div className="flex gap-4">
           <a
-            href={site.github}
+            href="https://nextjs.org/docs"
             target="_blank"
             rel="noreferrer"
             className="transition hover:text-white"
           >
-            GitHub
+            Next.js Docs
           </a>
 
           <a
-            href={site.linkedin}
+            href="https://vercel.com/new"
             target="_blank"
             rel="noreferrer"
             className="transition hover:text-white"
           >
-            LinkedIn
+            Deploy
           </a>
         </div>
       </div>

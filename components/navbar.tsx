@@ -9,24 +9,20 @@ export default function Navbar() {
         </a>
 
         <div className="flex flex-wrap items-center gap-4 text-sm text-white/60">
-          <a href="#projects" className="transition hover:text-white">
-            Projects
+          <a href="#features" className="transition hover:text-white">
+            Patterns
           </a>
 
           <a href="#stack" className="transition hover:text-white">
             Stack
           </a>
 
-          <a href="#about" className="transition hover:text-white">
-            About
-          </a>
-
-          <a href="#timeline" className="transition hover:text-white">
-            Progress
-          </a>
-
           <a href="#contact" className="transition hover:text-white">
-            Contact
+            Demo
+          </a>
+
+          <a href="#deploy" className="transition hover:text-white">
+            Deploy
           </a>
         </div>
       </nav>

@@ -7,22 +7,17 @@ export type StackGroup = {
 export const stack: StackGroup[] = [
   {
     title: "Frontend",
-    description: "The parts users see and interact with.",
-    tools: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+    description: "The pages and UI users see and interact with.",
+    tools: ["React 19", "Next.js App Router", "TypeScript", "Tailwind CSS"],
   },
   {
-    title: "Backend",
-    description: "The server-side logic that powers applications.",
-    tools: ["Node.js", "APIs", "Databases", "Authentication"],
+    title: "API & Server",
+    description: "Server-side logic handled inside the same app.",
+    tools: ["Route Handlers", "Server Components", "JSON APIs"],
   },
   {
-    title: "AI & Automation",
-    description: "Systems that use AI to automate workflows and decisions.",
-    tools: [
-      "OpenAI API",
-      "Prompt Engineering",
-      "AI Agents",
-      "Workflow Automation",
-    ],
+    title: "Deployment",
+    description: "Build and ship with zero configuration.",
+    tools: ["Vercel", "Node.js", "npm", "CI Builds"],
   },
 ];

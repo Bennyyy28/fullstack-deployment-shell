@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Benny Goldberg | AI Systems Builder",
+  title: "Full-Stack Deployment Shell",
   description:
-    "Portfolio for Benny Goldberg, a marketing student building full-stack applications, AI workflows, automation systems, and business tools.",
+    "A reusable Next.js starter for shipping frontend pages, API routes, forms, and Vercel deployments.",
 };
 
 export default function RootLayout({

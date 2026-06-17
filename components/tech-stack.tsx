@@ -10,12 +10,12 @@ export default function TechStack() {
           </p>
 
           <h2 className="text-4xl font-semibold tracking-tight md:text-5xl">
-            Tools I’m learning to build useful systems.
+            The stack this shell ships with.
           </h2>
 
           <p className="mt-4 max-w-2xl text-white/60">
-            My current development stack is focused on building modern web apps,
-            business tools, AI workflows, and practical automation systems.
+            A focused, modern toolset for building and deploying full-stack web
+            apps without extra configuration.
           </p>
         </div>
 
